@@ -45,7 +45,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition"
                 >
-                  <Instagram className="h-4 w-4 text-gold" /> @projekitaa_
+                  <Instagram className="h-4 w-4 text-gold" /> @studio.projekita
                 </a>
               </li>
               <li>
