@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekita — Jasa Live Streaming, Fotografi & Videografi Bengkulu</title>
+  <meta name="description" content="Projekita menyediakan jasa live streaming, fotografi, dan videografi profesional di Bengkulu untuk wedding, seminar, webinar, wisuda, event perusahaan, konser, komunitas, dan acara keagamaan." />
+  <meta name="keywords" content="jasa live streaming Bengkulu, live streaming wedding Bengkulu, jasa fotografi Bengkulu, jasa videografi Bengkulu, dokumentasi event Bengkulu, Projekita Bengkulu" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #07070a;
+      --dark-2: #0f1015;
+      --card-dark: #15161d;
+      --light: #f7f4ed;
+      --white: #ffffff;
+      --muted: #a4a7b0;
+      --muted-dark: #636672;
+      --gold: #d6a94a;
+      --gold-2: #f3c96b;
+      --line: rgba(255, 255, 255, 0.12);
+      --line-dark: rgba(15, 16, 21, 0.1);
+      --radius: 24px;
+      --shadow: 0 24px 70px rgba(0,0,0,.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+      color: #111;
+    }
+
+    .section-dark {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(214,169,74,.32);
+      border-radius: 999px;
+      color: var(--gold-2);
+      background: rgba(214,169,74,.08);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 18px;
+    }
+
+    .section-light .eyebrow {
+      color: #8a641c;
+      background: rgba(214,169,74,.13);
+      border-color: rgba(214,169,74,.24);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 56px);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section-light p {
+      color: #5d5f68;
+    }
+
+    .lead {
+      font-size: clamp(17px, 2vw, 20px);
+      max-width: 720px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      min-height: 52px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: all .25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #15100a;
+      box-shadow: 0 14px 40px rgba(214,169,74,.26);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--gold-2);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      border-color: rgba(255,255,255,.14);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.14);
+      transform: translateY(-2px);
+    }
+
+    .section-light .btn-secondary {
+      background: #111;
+      color: white;
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.16);
+      background: transparent;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      border-radius: var(--radius);
+      padding: 28px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 80px rgba(0,0,0,.12);
+      transition: all .25s ease;
+    }
+
+    .section-light .card {
+      background: #fff;
+      border: 1px solid rgba(15,16,21,.08);
+      box-shadow: 0 18px 50px rgba(15,16,21,.06);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214,169,74,.45);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(214,169,74,.15);
+      color: var(--gold-2);
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .section-light .icon {
+      background: rgba(214,169,74,.15);
+      color: #8a641c;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-title p {
+      max-width: 560px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(7,7,10,.64);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      font-size: 18px;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--gold), #fff1b2);
+      color: #080808;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      letter-spacing: -.05em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-menu a:hover {
+      color: var(--gold-2);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      color: white;
+      font-size: 22px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 142px 0 80px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(214,169,74,.18), transparent 32%),
+        radial-gradient(circle at 20% 65%, rgba(255,255,255,.08), transparent 30%),
+        linear-gradient(135deg, #050507 0%, #101118 55%, #08080b 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text .lead {
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+
+    .trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .trust-list span {
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      color: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.05);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 540px;
+    }
+
+    .visual-main {
+      position: absolute;
+      inset: 20px 0 0 20px;
+      border-radius: 38px;
+      overflow: hidden;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80") center/cover;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: var(--shadow);
+    }
+
+    .on-air {
+      position: absolute;
+      top: 42px;
+      right: 28px;
+      background: rgba(255,255,255,.9);
+      color: #111;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .on-air::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #e11d48;
+      border-radius: 999px;
+      margin-right: 8px;
+      box-shadow: 0 0 0 6px rgba(225,29,72,.16);
+    }
+
+    .visual-card {
+      position: absolute;
+      width: 210px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(12,12,16,.76);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 22px 60px rgba(0,0,0,.28);
+    }
+
+    .visual-card h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .visual-card p {
+      font-size: 13px;
+    }
+
+    .vc-1 { left: -6px; bottom: 86px; }
+    .vc-2 { right: -8px; bottom: 156px; }
+    .vc-3 { left: 70px; top: 20px; }
+
+    /* ABOUT */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .stat {
+      padding: 22px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--line-dark);
+    }
+
+    .stat strong {
+      display: block;
+      color: #111;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -.05em;
+    }
+
+    .stat span {
+      color: var(--muted-dark);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* DETAIL */
+    .feature-number {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--gold-2);
+      letter-spacing: .22em;
+      margin-bottom: 18px;
+    }
+
+    ul.clean {
+      list-style: none;
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    ul.clean li {
+      color: inherit;
+      opacity: .82;
+      font-size: 14px;
+    }
+
+    ul.clean li::before {
+      content: "✓";
+      color: var(--gold-2);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .section-light ul.clean li::before {
+      color: #8a641c;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-image {
+      height: 210px;
+      border-radius: 22px;
+      margin-bottom: 20px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,.54));
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(214,169,74,.14);
+      color: #8a641c;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* PACKAGES */
+    .package {
+      position: relative;
+    }
+
+    .package.highlight {
+      border-color: rgba(214,169,74,.55);
+      box-shadow: 0 24px 80px rgba(214,169,74,.14);
+      transform: translateY(-12px);
+    }
+
+    .recommended {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--gold);
+      color: #111;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .package .label {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-light .package .label {
+      color: var(--muted-dark);
+    }
+
+    /* TESTIMONIAL */
+    .quote {
+      font-size: 52px;
+      line-height: .8;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .client {
+      margin-top: 22px;
+      font-weight: 900;
+      color: #111;
+    }
+
+    .client-location {
+      font-size: 13px;
+      color: var(--muted-dark);
+      font-weight: 700;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px 0;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .28s ease;
+    }
+
+    .faq-answer p {
+      padding-bottom: 24px;
+      max-width: 760px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+    }
+
+    .faq-item.active .plus {
+      transform: rotate(45deg);
+    }
+
+    .plus {
+      transition: transform .2s ease;
+    }
+
+    /* CTA */
+    .final-cta {
+      text-align: center;
+      border-radius: 40px;
+      padding: 76px 34px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(214,169,74,.22), transparent 36%),
+        linear-gradient(135deg, #111218, #060607);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .final-cta h2,
+    .final-cta p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta p {
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 68px 0 34px;
+      background: #050506;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .8fr;
+      gap: 36px;
+      margin-bottom: 44px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 12px;
+      color: rgba(255,255,255,.68);
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-2);
+    }
+
+    .copyright {
+      padding-top: 26px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(255,255,255,.52);
+      font-size: 14px;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2000;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 16px 40px rgba(34,197,94,.36);
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      transition: all .2s ease;
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-3px);
+      background: #16a34a;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 76px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(7,7,10,.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding: 20px;
+    }
+
+    .mobile-menu.active {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mobile-menu a {
+      padding: 12px 0;
+      color: rgba(255,255,255,.78);
+      font-weight: 800;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .nav-menu,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .hero-inner,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 470px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .section-title p {
+        margin-top: 10px;
+      }
+
+      .package.highlight {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-actions,
+      .copyright {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+      .visual-main {
+        inset: 0;
+        border-radius: 28px;
+      }
+
+      .visual-card {
+        width: 180px;
+        padding: 14px;
+      }
+
+      .vc-1 { left: 10px; bottom: 70px; }
+      .vc-2 { right: 10px; bottom: 150px; }
+      .vc-3 { left: 20px; top: 24px; }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .floating-wa {
+        left: 16px;
+        right: 16px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    PENTING:
+    Ganti NOMOR_WHATSAPP di bawah dengan nomor WhatsApp bisnis.
+    Format: 628xxxxxxxxxx tanpa tanda +.
+  -->
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">PK</span>
+        <span>PROJE KITA</span>
+      </a>
+
+      <div class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#event">Event</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#paket">Paket</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara.%0A%0AJenis%20acara%3A%0ATanggal%20acara%3A%0ALokasi%20acara%3A%0AKebutuhan%3A%20Live%20Streaming%20%2F%20Foto%20%2F%20Video%20%2F%20Drone%0AEstimasi%20durasi%20acara%3A" target="_blank">Booking Sekarang</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#event">Event</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#paket">Paket</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+      <a class="btn btn-primary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara.%0A%0AJenis%20acara%3A%0ATanggal%20acara%3A%0ALokasi%20acara%3A%0AKebutuhan%3A%20Live%20Streaming%20%2F%20Foto%20%2F%20Video%20%2F%20Drone%0AEstimasi%20durasi%20acara%3A" target="_blank">Booking Sekarang</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <div class="eyebrow">Based in Bengkulu • Event Documentation Team</div>
+        <h1>Live Streaming, Fotografi, dan Videografi Profesional di Bengkulu</h1>
+        <p class="lead">
+          Bantu acara kamu tampil lebih rapi, dinamis, dan berkesan melalui dokumentasi visual profesional — mulai dari multi-camera setup, live switching, audio capture, hingga file rekaman full acara.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara.%0A%0AJenis%20acara%3A%0ATanggal%20acara%3A%0ALokasi%20acara%3A%0AKebutuhan%3A%20Live%20Streaming%20%2F%20Foto%20%2F%20Video%20%2F%20Drone%0AEstimasi%20durasi%20acara%3A" target="_blank">Konsultasi via WhatsApp</a>
+          <a class="btn btn-secondary" href="#layanan">Lihat Layanan</a>
+        </div>
+
+        <div class="trust-list">
+          <span>Multi Camera Setup</span>
+          <span>Live Switching</span>
+          <span>Audio Capture</span>
+          <span>Full Recording</span>
+          <span>Drone Available</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="visual-main">
+          <div class="on-air">ON AIR</div>
+        </div>
+
+        <div class="visual-card vc-3">
+          <h4>2–3 Camera</h4>
+          <p>Multi-angle setup</p>
+        </div>
+
+        <div class="visual-card vc-1">
+          <h4>YouTube · IG · Zoom</h4>
+          <p>Streaming platform</p>
+        </div>
+
+        <div class="visual-card vc-2">
+          <h4>Audio Capture</h4>
+          <p>Direct sound system</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-light" id="tentang">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Tentang Kami</div>
+          <h2>Tentang Projekita</h2>
+        </div>
+        <p class="lead">
+          Tim dokumentasi acara berbasis di Bengkulu yang membantu momen penting kamu terlihat lebih profesional, rapi, dan mudah diakses secara online.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <p>
+            Projekita adalah penyedia jasa live streaming, fotografi, dan videografi yang membantu berbagai jenis acara agar dapat disiarkan secara profesional, terdokumentasi dengan baik, dan dinikmati kembali melalui hasil rekaman berkualitas.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card reveal">
+            <div class="icon">📍</div>
+            <h3>Based in Bengkulu</h3>
+            <p>Lokal, paham kebutuhan event di sekitar.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon">🎥</div>
+            <h3>Berbagai Jenis Acara</h3>
+            <p>Wedding, seminar, wisuda, korporat, dan lainnya.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon">🎙️</div>
+            <h3>Visual & Audio Berkualitas</h3>
+            <p>Setup teknis disesuaikan untuk hasil maksimal.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon">🤝</div>
+            <h3>Fleksibel & Komunikatif</h3>
+            <p>Menyesuaikan kebutuhan dan budget klien.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><strong>2020</strong><span>Since</span></div>
+        <div class="stat"><strong>3</strong><span>Layanan Utama</span></div>
+        <div class="stat"><strong>12+</strong><span>Jenis Event</span></div>
+        <div class="stat"><strong>100%</strong><span>Output Siap Publikasi</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="layanan">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Layanan</div>
+          <h2>Layanan Kami</h2>
+        </div>
+        <p class="lead">Pilih layanan dokumentasi yang paling sesuai dengan kebutuhan acara kamu.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon">📡</div>
+          <h3>Live Streaming</h3>
+          <p>Layanan siaran langsung profesional menggunakan kamera profesional, audio capture, live switching, dan dukungan platform streaming sesuai kebutuhan.</p>
+          <ul class="clean">
+            <li>Multi-camera setup</li>
+            <li>Live switching</li>
+            <li>Audio capture dari sound system</li>
+            <li>Streaming ke YouTube, Instagram, Zoom</li>
+            <li>File recording full acara</li>
+          </ul>
+          <br>
+          <a class="btn btn-primary" href="#live">Detail Live Streaming</a>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">📷</div>
+          <h3>Fotografi</h3>
+          <p>Dokumentasi foto untuk menangkap momen penting acara secara natural, rapi, dan estetik. Cocok untuk wedding, korporat, wisuda, hingga komunitas.</p>
+          <ul class="clean">
+            <li>Foto dokumentasi event</li>
+            <li>Foto candid & momen penting</li>
+            <li>Editing warna natural</li>
+            <li>Output arsip, publikasi & media sosial</li>
+          </ul>
+          <br>
+          <a class="btn btn-secondary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20fotografi." target="_blank">Konsultasi Foto</a>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🎬</div>
+          <h3>Videografi</h3>
+          <p>Produksi video dokumentasi acara dengan pengambilan gambar yang sinematik, rapi, dan sesuai kebutuhan publikasi maupun arsip.</p>
+          <ul class="clean">
+            <li>Dokumentasi video acara</li>
+            <li>Highlight & recap video</li>
+            <li>Editing video sinematik</li>
+            <li>Output media sosial / dokumentasi resmi</li>
+          </ul>
+          <br>
+          <a class="btn btn-secondary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20videografi." target="_blank">Konsultasi Video</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="live">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Live Streaming</div>
+          <h2>Detail Layanan Live Streaming</h2>
+        </div>
+        <p class="lead">Kami menyiapkan kebutuhan teknis siaran agar acara terlihat lebih dinamis, jelas, dan profesional.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="feature-number">01</div>
+          <h3>Multi Camera Setup</h3>
+          <p>Menggunakan 2–3 kamera profesional untuk menangkap acara dari berbagai sudut agar tampilan tidak monoton.</p>
+          <ul class="clean">
+            <li>2–3 kamera profesional</li>
+            <li>Angle utama, close-up, wide shot</li>
+            <li>Berbagai sudut pengambilan</li>
+            <li>Dapat dikombinasi drone camera</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="feature-number">02</div>
+          <h3>Live Switching</h3>
+          <p>Pergantian kamera langsung saat acara berlangsung, membuat siaran terasa seperti produksi televisi.</p>
+          <ul class="clean">
+            <li>Perpindahan kamera real-time</li>
+            <li>Tampilan lebih dinamis</li>
+            <li>Cocok formal & hiburan</li>
+            <li>Live streaming tidak monoton</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="feature-number">03</div>
+          <h3>Streaming Platform</h3>
+          <p>Acara dapat disiarkan melalui berbagai platform sesuai kebutuhan klien.</p>
+          <ul class="clean">
+            <li>YouTube Live</li>
+            <li>Instagram Live</li>
+            <li>Zoom</li>
+            <li>Platform lain sesuai kebutuhan</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="feature-number">04</div>
+          <h3>Audio Capture</h3>
+          <p>Audio diambil langsung dari sound system agar suara pembicara, MC, musik, dan rangkaian acara terdengar jelas.</p>
+          <ul class="clean">
+            <li>Suara lebih jernih</li>
+            <li>Mengurangi noise sekitar</li>
+            <li>Cocok seminar, wedding, ibadah</li>
+            <li>Kualitas siaran nyaman ditonton</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="feature-number">05</div>
+          <h3>Recording</h3>
+          <p>Setiap acara direkam penuh dan diberikan ke klien sebagai arsip dokumentasi atau bahan konten ulang.</p>
+          <ul class="clean">
+            <li>File rekaman full acara</li>
+            <li>Bisa untuk dokumentasi</li>
+            <li>Bisa dipotong untuk konten</li>
+            <li>Cocok arsip pribadi & lembaga</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="feature-number">PLUS</div>
+          <h3>Drone Camera</h3>
+          <p>Pengambilan gambar udara dapat ditambahkan apabila lokasi, cuaca, dan kondisi acara memungkinkan.</p>
+          <ul class="clean">
+            <li>Establishing shot acara</li>
+            <li>Visual lebih megah</li>
+            <li>Cocok outdoor & wedding</li>
+            <li>Menambah variasi konten</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="event">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Jenis Acara</div>
+          <h2>Cocok untuk Berbagai Jenis Acara</h2>
+        </div>
+        <p class="lead">Setiap acara memiliki kebutuhan dokumentasi yang berbeda. Projekita membantu menyesuaikan setup terbaik berdasarkan jenis acara, lokasi, durasi, dan kebutuhan teknis.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="icon">💍</div><h3>Pernikahan</h3><p>Dokumentasi momen sakral agar bisa disaksikan keluarga dari mana saja.</p></div>
+        <div class="card reveal"><div class="icon">💻</div><h3>Seminar / Webinar</h3><p>Siaran acara edukatif dengan audio jelas dan tampilan profesional.</p></div>
+        <div class="card reveal"><div class="icon">🏢</div><h3>Event Perusahaan</h3><p>Dokumentasi corporate, launching, gathering, dan acara internal.</p></div>
+        <div class="card reveal"><div class="icon">🎓</div><h3>Wisuda</h3><p>Abadikan momen kelulusan dengan live streaming, foto, dan video.</p></div>
+        <div class="card reveal"><div class="icon">🎵</div><h3>Konser / Pertunjukan</h3><p>Tampilan multi-angle agar pertunjukan terlihat lebih hidup.</p></div>
+        <div class="card reveal"><div class="icon">👥</div><h3>Acara Komunitas</h3><p>Dokumentasi komunitas agar mudah dipublikasikan dan diarsipkan.</p></div>
+        <div class="card reveal"><div class="icon">🕌</div><h3>Acara Keagamaan</h3><p>Siaran acara ibadah dengan tampilan rapi dan audio yang jelas.</p></div>
+        <div class="card reveal"><div class="icon">🎤</div><h3>Talkshow</h3><p>Produksi talkshow dengan multi-camera dan switching profesional.</p></div>
+        <div class="card reveal"><div class="icon">🚀</div><h3>Launching Produk</h3><p>Dokumentasi peluncuran agar momen bisa dipublikasikan luas.</p></div>
+        <div class="card reveal"><div class="icon">🤝</div><h3>Gathering</h3><p>Kumpulkan momen kebersamaan menjadi arsip yang berkesan.</p></div>
+        <div class="card reveal"><div class="icon">📝</div><h3>Workshop</h3><p>Rekaman lengkap sebagai materi belajar dan dokumentasi.</p></div>
+        <div class="card reveal"><div class="icon">🏫</div><h3>Sekolah / Kampus</h3><p>Dokumentasi kegiatan akademik dan acara kemahasiswaan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="workflow">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Workflow</div>
+          <h2>Alur Pemesanan Layanan</h2>
+        </div>
+        <p class="lead">Proses pemesanan dibuat sederhana agar kebutuhan dokumentasi acara kamu bisa disiapkan dengan jelas.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="feature-number">01</div><h3>Konsultasi Kebutuhan</h3><p>Klien menghubungi Projekita untuk menjelaskan jenis acara, tanggal, lokasi, durasi, dan kebutuhan dokumentasi.</p></div>
+        <div class="card reveal"><div class="feature-number">02</div><h3>Penyesuaian Paket</h3><p>Tim membantu menyesuaikan jumlah kamera, live streaming, audio, drone, fotografi, videografi, dan output file.</p></div>
+        <div class="card reveal"><div class="feature-number">03</div><h3>Produksi Hari Acara</h3><p>Tim melakukan setup alat, pengecekan kamera, audio, jaringan, dan proses dokumentasi sesuai kebutuhan acara.</p></div>
+        <div class="card reveal"><div class="feature-number">04</div><h3>Output Dokumentasi</h3><p>Klien menerima hasil berupa file rekaman, foto, video, atau output lain sesuai kesepakatan layanan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="why">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Why Us</div>
+          <h2>Kenapa Memilih Projekita?</h2>
+        </div>
+        <p class="lead">Kami membantu acara kamu terlihat lebih rapi, profesional, dan terdokumentasi dengan baik.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="icon">📍</div><h3>Based in Bengkulu</h3><p>Berbasis di Bengkulu dan memahami kebutuhan dokumentasi event lokal maupun acara di sekitarnya.</p></div>
+        <div class="card reveal"><div class="icon">🎛️</div><h3>Setup Profesional</h3><p>Menggunakan kamera profesional, audio capture, live switching, dan sistem streaming yang disesuaikan.</p></div>
+        <div class="card reveal"><div class="icon">⚡</div><h3>Siaran Lebih Dinamis</h3><p>Multi-camera dan live switching membuat tampilan acara terasa seperti siaran profesional.</p></div>
+        <div class="card reveal"><div class="icon">🌐</div><h3>Fleksibel Banyak Platform</h3><p>Mendukung siaran ke YouTube Live, Instagram Live, Zoom, atau platform lain sesuai kebutuhan.</p></div>
+        <div class="card reveal"><div class="icon">💾</div><h3>Dokumentasi Lengkap</h3><p>Tidak hanya live, acara juga direkam penuh untuk arsip, publikasi, atau konten ulang.</p></div>
+        <div class="card reveal"><div class="icon">✨</div><h3>Cocok Banyak Acara</h3><p>Wedding, seminar, wisuda, konser, event perusahaan, komunitas, hingga acara keagamaan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="portfolio">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Portfolio</div>
+          <h2>Portfolio Dokumentasi</h2>
+        </div>
+        <p class="lead">Beberapa contoh kategori acara yang dapat ditangani oleh Projekita.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Live Streaming</span><span class="badge">Foto</span><span class="badge">Video</span></div>
+          <h3>Wedding Live Streaming</h3>
+          <p>Dokumentasi dan siaran langsung acara pernikahan dengan tampilan rapi dan audio jelas.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Live Streaming</span><span class="badge">Audio Capture</span></div>
+          <h3>Seminar & Webinar</h3>
+          <p>Siaran acara edukatif, formal, dan online meeting dengan kualitas visual dan audio yang stabil.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Live Streaming</span><span class="badge">Video</span></div>
+          <h3>Wisuda</h3>
+          <p>Dokumentasi momen kelulusan untuk kampus, sekolah, dan lembaga pendidikan.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Foto</span><span class="badge">Video</span><span class="badge">Live</span></div>
+          <h3>Event Perusahaan</h3>
+          <p>Dokumentasi kegiatan corporate, launching produk, gathering, dan acara internal perusahaan.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Multi Camera</span><span class="badge">Video</span></div>
+          <h3>Konser / Pertunjukan</h3>
+          <p>Pengambilan gambar multi-angle untuk pertunjukan musik, seni, dan hiburan.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="portfolio-image" style="background-image:url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="badge-row"><span class="badge">Live Streaming</span><span class="badge">Recording</span></div>
+          <h3>Acara Keagamaan</h3>
+          <p>Siaran dan dokumentasi acara ibadah atau kegiatan keagamaan dengan visual rapi dan suara jelas.</p>
+        </div>
+      </div>
+
+      <br><br>
+      <div class="reveal" style="text-align:center;">
+        <a class="btn btn-secondary" href="https://www.instagram.com/projekitaa_/" target="_blank">Lihat Portfolio di Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="paket">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Paket</div>
+          <h2>Paket Layanan</h2>
+        </div>
+        <p class="lead">Pilih paket sesuai kebutuhan acara. Harga dapat menyesuaikan jenis acara, lokasi, durasi, jumlah kamera, dan kebutuhan output dokumentasi.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card package reveal">
+          <div class="label">Untuk acara sederhana</div>
+          <h3>Basic</h3>
+          <ul class="clean">
+            <li>1–2 kamera</li>
+            <li>Live streaming ke 1 platform</li>
+            <li>Audio capture</li>
+            <li>File recording</li>
+            <li>Cocok acara kecil, komunitas, internal</li>
+          </ul>
+          <br>
+          <a class="btn btn-secondary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20tanya%20Paket%20Basic." target="_blank">Tanya Paket Basic</a>
+        </div>
+
+        <div class="card package highlight reveal">
+          <div class="recommended">Rekomendasi</div>
+          <div class="label">Paling fleksibel</div>
+          <h3>Standard</h3>
+          <ul class="clean">
+            <li>2–3 kamera</li>
+            <li>Live switching</li>
+            <li>Audio capture</li>
+            <li>Streaming ke YouTube / Zoom / Instagram</li>
+            <li>File recording full acara</li>
+            <li>Cocok wedding, seminar, wisuda</li>
+          </ul>
+          <br>
+          <a class="btn btn-primary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20tanya%20Paket%20Standard." target="_blank">Tanya Paket Standard</a>
+        </div>
+
+        <div class="card package reveal">
+          <div class="label">Untuk kebutuhan khusus</div>
+          <h3>Custom</h3>
+          <ul class="clean">
+            <li>Multi-camera setup</li>
+            <li>Drone camera</li>
+            <li>Fotografi & videografi</li>
+            <li>Highlight video</li>
+            <li>Platform streaming custom</li>
+            <li>Cocok event besar & korporat</li>
+          </ul>
+          <br>
+          <a class="btn btn-secondary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20Paket%20Custom." target="_blank">Konsultasi Paket Custom</a>
+        </div>
+      </div>
+
+      <br>
+      <p class="reveal" style="text-align:center; max-width:780px; margin:auto;">
+        Harga dan kebutuhan teknis dapat menyesuaikan jenis acara, lokasi, durasi, jumlah kamera, platform streaming, dan kebutuhan output dokumentasi.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-light" id="testimoni">
+    <div class="container">
+      <div class="section-title reveal">
+        <div>
+          <div class="eyebrow">Testimoni</div>
+          <h2>Apa Kata Mereka?</h2>
+        </div>
+        <p class="lead">Kepuasan mereka adalah bagian penting dari setiap dokumentasi acara.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="quote">“</div>
+          <p>Siarannya rapi, audio jelas, dan hasil rekamannya bisa kami gunakan lagi untuk dokumentasi.</p>
+          <div class="client">Wedding Event</div>
+          <div class="client-location">Bengkulu, Indonesia</div>
+        </div>
+
+        <div class="card reveal">
+          <div class="quote">“</div>
+          <p>Timnya komunikatif dan setup acaranya terlihat profesional dari awal sampai akhir.</p>
+          <div class="client">Seminar & Webinar</div>
+          <div class="client-location">Bengkulu, Indonesia</div>
+        </div>
+
+        <div class="card reveal">
+          <div class="quote">“</div>
+          <p>Live streaming tidak monoton karena ada pergantian kamera. Hasilnya terlihat lebih hidup.</p>
+          <div class="client">Komunitas</div>
+          <div class="client-location">Bengkulu, Indonesia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="faq">
+    <div class="container">
+      <div class="section-title reveal" style="text-align:center; display:block;">
+        <div class="eyebrow">FAQ</div>
+        <h2>Pertanyaan yang Sering Ditanyakan</h2>
+      </div>
+
+      <div class="faq reveal">
+        <div class="faq-item active">
+          <button class="faq-question">Apakah Projekita hanya melayani area Bengkulu? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Projekita berbasis di Bengkulu. Untuk layanan di luar kota atau luar wilayah, dapat dikonsultasikan terlebih dahulu menyesuaikan jadwal, lokasi, dan kebutuhan teknis acara.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Bisa live ke YouTube dan Zoom sekaligus? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Bisa disesuaikan dengan kebutuhan acara. Platform streaming dapat menggunakan YouTube Live, Instagram Live, Zoom, atau platform lain sesuai kebutuhan klien.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Apakah hasil live streaming bisa direkam? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Ya. File rekaman full acara dapat disediakan dan digunakan kembali untuk dokumentasi, arsip, atau konten ulang.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Apakah bisa menggunakan drone? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Bisa, apabila lokasi dan kondisi acara memungkinkan untuk pengambilan gambar menggunakan drone.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Apakah audio bisa langsung dari sound system? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Ya. Audio dapat diambil langsung dari sound system agar suara lebih jelas dan nyaman didengar oleh penonton live streaming.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Apakah bisa sekalian foto dan video? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Bisa. Projekita juga menyediakan layanan fotografi dan videografi yang dapat dikombinasikan dengan layanan live streaming.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Kapan sebaiknya booking layanan? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Sebaiknya booking dilakukan lebih awal agar tim dapat menyesuaikan jadwal, kebutuhan alat, jumlah kamera, platform streaming, dan konsep dokumentasi acara.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Apakah paket bisa custom? <span class="plus">+</span></button>
+          <div class="faq-answer"><p>Bisa. Paket layanan dapat disesuaikan dengan kebutuhan acara, seperti jumlah kamera, durasi acara, drone, fotografi, videografi, hingga output file.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="kontak">
+    <div class="container">
+      <div class="final-cta reveal">
+        <div class="eyebrow">Let's Talk</div>
+        <h2>Siap Bikin Acara Kamu Tampil Lebih Profesional?</h2>
+        <p class="lead">Konsultasikan kebutuhan live streaming, fotografi, dan videografi acara kamu bersama Projekita. Kami bantu sesuaikan setup terbaik berdasarkan jenis acara, lokasi, durasi, dan kebutuhan dokumentasi.</p>
+        <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+          <a class="btn btn-primary" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara.%0A%0AJenis%20acara%3A%0ATanggal%20acara%3A%0ALokasi%20acara%3A%0AKebutuhan%3A%20Live%20Streaming%20%2F%20Foto%20%2F%20Video%20%2F%20Drone%0AEstimasi%20durasi%20acara%3A" target="_blank">Booking via WhatsApp</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/projekitaa_/" target="_blank">Kunjungi Instagram</a>
+        </div>
+        <br>
+        <p>Based in Bengkulu • Live Streaming • Fotografi • Videografi</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <span class="brand-mark">PK</span>
+          <span>PROJE KITA</span>
+        </a>
+        <br>
+        <p>Jasa live streaming, fotografi, dan videografi profesional berbasis di Bengkulu untuk berbagai kebutuhan acara.</p>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#paket">Paket</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Kontak</h3>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/projekitaa_/" target="_blank">@projekitaa_</a>
+          <a href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara." target="_blank">WhatsApp Booking</a>
+          <span>Bengkulu, Indonesia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      <span>© 2026 Projekita. All rights reserved.</span>
+      <span>Based in Bengkulu • Live Streaming • Fotografi • Videografi</span>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/NOMOR_WHATSAPP?text=Halo%20Projekita%2C%20saya%20ingin%20konsultasi%20layanan%20dokumentasi%20acara.%0A%0AJenis%20acara%3A%0ATanggal%20acara%3A%0ALokasi%20acara%3A%0AKebutuhan%3A%20Live%20Streaming%20%2F%20Foto%20%2F%20Video%20%2F%20Drone%0AEstimasi%20durasi%20acara%3A" target="_blank">💬 Chat WhatsApp</a>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+    });
+
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement;
+        document.querySelectorAll(".faq-item").forEach((faq) => {
+          if (faq !== item) faq.classList.remove("active");
+        });
+        item.classList.toggle("active");
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
