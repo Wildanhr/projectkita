@@ -1,5 +1,5 @@
 import { Instagram, ArrowUpRight } from "lucide-react";
-import { INSTAGRAM_URL } from "@/lib/site";
+import { INSTAGRAM_URL, INSTAGRAM_CATALOG_URL } from "@/lib/site";
 
 const items = [
   {
@@ -54,14 +54,24 @@ export function PortfolioSection() {
               Beberapa contoh kategori acara yang dapat ditangani oleh Projekita.
             </p>
           </div>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-gold font-medium hover:gap-3 transition-all"
-          >
-            <Instagram className="h-4 w-4" /> Lihat Portfolio di Instagram
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href={INSTAGRAM_CATALOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-gold font-medium hover:gap-3 transition-all"
+            >
+              <Instagram className="h-4 w-4" /> @rareproject.id
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-gold font-medium hover:gap-3 transition-all"
+            >
+              <Instagram className="h-4 w-4" /> @studio.projekita
+            </a>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

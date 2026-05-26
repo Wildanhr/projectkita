@@ -1,7 +1,7 @@
 const testimonials = [
-  { text: "Siarannya rapi, audio jelas, dan hasil rekamannya bisa kami gunakan lagi untuk dokumentasi.", name: "Klien Wedding" },
-  { text: "Timnya komunikatif dan setup acaranya terlihat profesional dari awal sampai akhir.", name: "Klien Seminar" },
-  { text: "Live streaming tidak monoton karena ada pergantian kamera. Hasilnya terlihat lebih hidup.", name: "Klien Komunitas" },
+  { text: "Siarannya rapi, audio jelas, dan hasil rekamannya bisa kami gunakan lagi untuk dokumentasi.", name: "Wedding Event" },
+  { text: "Timnya komunikatif dan setup acaranya terlihat profesional dari awal sampai akhir.", name: "Seminar & Webinar" },
+  { text: "Live streaming tidak monoton karena ada pergantian kamera. Hasilnya terlihat lebih hidup.", name: "Komunitas" },
 ];
 
 export function TestimonialsSection() {
@@ -11,10 +11,10 @@ export function TestimonialsSection() {
         <div className="max-w-2xl mb-14">
           <p className="text-xs tracking-[0.25em] text-gold uppercase mb-4">Testimoni</p>
           <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight">
-            Apa Kata <span className="italic font-light text-gold">Klien?</span>
+            Apa Kata <span className="italic font-light text-gold">Mereka?</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Kepuasan klien adalah bagian penting dari setiap dokumentasi acara.
+            Kepuasan mereka adalah bagian penting dari setiap dokumentasi acara.
           </p>
         </div>
 
